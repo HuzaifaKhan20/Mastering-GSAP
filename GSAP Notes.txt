@@ -1,0 +1,77 @@
+Animation:- is the movement of elements from starting point to the ending point.
+
+Starting Point *---------------* Ending Point
+
+----------------------------------------------------------------
+
+.from is used to play animation from starting point to ending point
+
+----------------------------------------------------------------
+
+.to is used to play animation from ending point to starting point
+
+----------------------------------------------------------------
+
+stagger:1  // Used to play animation on same elements after 1 second
+
+tl.from("#nav img, #nav h3, #nav h4, #nav button", {
+    y:-100,
+    duration:1,
+    delay:1,
+    opacity:0,
+    stagger:0.2,
+}) 
+
+Each element will show after 0.2s using stagger
+
+----------------------------------------------------------------
+
+yoyo: Used to move elements in to and fro motion like yoyo movement
+
+----------------------------------------------------------------
+
+repeat:-1, // -1 is used to play animation INFINITE
+
+----------------------------------------------------------------
+
+
+scrollTrigger:  // Used to play animation when scroll triggers a certain point OR It plays animation when element shown on screen after scroll to section
+
+
+gsap.from("#page2 #box", {
+    scale:0,
+    delay:1,
+    duration:1,
+    rotate:360,
+    scrollTrigger: { //Used to play animation when scroll triggers a certain point
+        trigger:"#page2 #box", //Used to target element
+        scroller:"body", // Used to consider parent element for scroll
+        markers:true, // Used to change view marker
+        start: "top 60%", // Used to change start marker
+        end: "top 30%", // Used to change end marker
+        scrub:5, // Used to play animation every time on scroll up and down
+    }
+})
+----------------------------------------------------------------
+
+
+Time Line is used to animate elements one after another
+
+var tl = gsap.timeline();
+
+tl.to("h1", {
+    x:600,
+    duration:1,
+})
+
+tl.to("h2", {
+    x:700,
+    duration:1,
+})
+
+tl.to("h3", {
+    x:800,
+    duration:1,
+})
+
+----------------------------------------------------------------
