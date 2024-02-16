@@ -22,7 +22,7 @@ tl.from("#nav img, #nav h3, #nav h4, #nav button", {
     stagger:0.2,
 }) 
 
-Each element will show after 0.2s using stagger
+Each element will show after 0.2s gap using stagger
 
 ----------------------------------------------------------------
 
